@@ -24,25 +24,40 @@ activeMenu();
 window.addEventListener("scroll",activeMenu);
 
 
+//*******************************     active about buttons ********************** */
+let about_buttons = document.querySelectorAll(".about_buttons p")
+let about_skills_content = document.querySelectorAll(".about_skills_content div")
+console.log(about_buttons)
+
+function openskill(ele,tar){
+    for(ab of about_buttons){
+        ab.classList.remove("active")
+    }
+
+    for(ask of about_skills_content){
+        ask.classList.remove("active")
+    }
+    document.getElementById(tar).classList.add("active")
+    document.getElementsByClassName(ele)[0].classList.add("active")
+}
+
+
 
 //**********************   scroll revel*********** */
 
 ScrollReveal({
     distance: "80px",
-    duration: 2000,
-    delay: 150,
+    duration: 1500,
+    delay: 100,
     reset:true,
 });
 
 ScrollReveal().reveal('.home_content , .heading', { origin:"top" });
-ScrollReveal().reveal('#Message', { origin:"bottom" });
-ScrollReveal().reveal('.home_img ,.services_box, .project1', { origin:"buttom" });
-ScrollReveal().reveal('.home_content h1, .about_img, #name, #mobile_number', { origin:"left" });
+ScrollReveal().reveal('#Message, .service2, .about_skills_content', { origin:"bottom" });
+ScrollReveal().reveal('.home_img ,.service3, .project3, .project4', { origin:"buttom" });
+ScrollReveal().reveal('.home_content h1, .about_img, #name, .service1, #mobile_number, .project1, .project2', { origin:"left" });
 ScrollReveal().reveal('.home_content p, .about_content, #email, #email_subject', { origin:"right" });
 
-ScrollReveal().reveal('.project2', { origin:"buttom",delay:"250",distance: "110px"});
-ScrollReveal().reveal('.project3', { origin:"buttom",delay:"350",distance: "130px" });
-ScrollReveal().reveal('.project4', { origin:"buttom",delay:"450",distance: "150px" });
 
 
 //*******************   Typing effect ************ */
@@ -54,6 +69,10 @@ const typed = new Typed(".skills_typping",{
     backDelay: 1000,
     loop: true,
 })
+
+
+//***********************           send message   ********************* */
+
 
 let send_message_button = document.getElementById("send_message_button");
 const Name = document.getElementById("name");
