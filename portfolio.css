@@ -181,11 +181,11 @@ span{
     background: var(--bg-color);
 }
 .about_img{
-    padding: 10rem;
+    padding: 3rem;
 }
 
 .about_img img{
-    height: 30vh;
+    height: 40vh;
     border: 2px solid var(--main-color);
 }
 
@@ -506,7 +506,7 @@ span{
     }
 
     .about_img img{
-        width: 60vw;
+        width: 85vw;
         height: auto;
         margin-top: 1rem;
     }
